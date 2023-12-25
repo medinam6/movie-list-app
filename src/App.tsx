@@ -1,15 +1,19 @@
-// import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import MovieList from "./components/MovieList";
 
 import "./App.css";
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
-      <MovieList />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MovieList />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;

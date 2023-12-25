@@ -28,14 +28,13 @@ const MovieDetails: React.FC = () => {
 
         setMovieDetails(response.data);
       } catch (error) {
-        console.error("Error fetching movie details:", error);
+        console.error("Error fetching movie details: ", error);
       } finally {
         setLoading(false);
       }
     };
 
     fetchMovieDetails();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [movieId]);
 
   if (loading) {
