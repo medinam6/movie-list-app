@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 interface MovieCardProps {
+  id: string;
   title: string;
   altText: string;
   imageUrl: string;
@@ -8,6 +10,7 @@ interface MovieCardProps {
 }
 
 const MovieCard: React.FC<MovieCardProps> = ({
+  id,
   title,
   altText,
   imageUrl,
@@ -15,8 +18,10 @@ const MovieCard: React.FC<MovieCardProps> = ({
 }) => {
   return (
     <div className="movie-card">
-      <h3>{title}</h3>
-      <a href={imageUrl} target="_blank" rel="noopener noreferrer">
+      <Link to={`/movies/${id}`}>
+        <h3>{title}</h3>
+      </Link>
+      <a href={largeImageUrl} target="_blank" rel="noopener noreferrer">
         <img src={imageUrl} alt={altText} />
       </a>
     </div>

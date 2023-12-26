@@ -5,10 +5,10 @@ import { useParams } from "react-router-dom";
 interface MovieDetailsData {
   title: string;
   overview: string;
-  // popularity: number;
-  // release_data: string;
-  // vote_average: number;
-  // vote_count: number;
+  popularity: number;
+  release_date: string;
+  vote_average: number;
+  vote_count: number;
 }
 
 const MovieDetails: React.FC = () => {
@@ -48,7 +48,32 @@ const MovieDetails: React.FC = () => {
   return (
     <div>
       <h2>{movieDetails.title}</h2>
-      <p>{movieDetails.overview}</p>
+
+      <div>
+        <h3>Overview</h3>
+        <p>{movieDetails.overview}</p>
+      </div>
+
+      <div>
+        <h3>Popularity</h3>
+        <div>{movieDetails.popularity}</div>
+      </div>
+
+      <div>
+        <h3>Release Date</h3>
+        <div>{movieDetails.release_date}</div>
+      </div>
+
+      <div>
+        <h3>Vote Average</h3>
+        <div>{movieDetails.vote_average}</div>
+      </div>
+
+      <div>
+        <h3>Vote Count</h3>
+        <div>{movieDetails.vote_count}</div>
+      </div>
+
     </div>
   );
 };

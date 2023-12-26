@@ -5,7 +5,7 @@ import MovieCard from "./MovieCard";
 
 
 interface Movie {
-  id: number;
+  id: string;
   title: string;
   poster_path: string;
 }
@@ -37,26 +37,25 @@ const MovieList: React.FC = () => {
   }
 
   if (!movies) {
-    return <div>omg</div>;
+    return <div>List not found</div>;
   }
 
   return (
-    <>
+    <div>
       <h2>Popular Movies</h2>
-      <div>
-        <ul>
-          {movies.map((movie) => (
-            <MovieCard
-              key={movie.id}
-              title={movie.title}
-              altText={movie.title}
-              imageUrl={`https://www.themoviedb.org/t/p/w300/${movie.poster_path}`}
-              largeImageUrl={`https://www.themoviedb.org/t/p/original/${movie.poster_path}`}
-            />
-          ))}
-        </ul>
-      </div>
-    </>
+      <ul>
+        {movies.map((movie) => (
+          <MovieCard
+            key={movie.id}
+            id={movie.id}
+            title={movie.title}
+            altText={movie.title}
+            imageUrl={`https://www.themoviedb.org/t/p/w300/${movie.poster_path}`}
+            largeImageUrl={`https://www.themoviedb.org/t/p/original/${movie.poster_path}`}
+          />
+        ))}
+      </ul>
+    </div>
   );
 };
 

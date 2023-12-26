@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import MovieList from "./components/MovieList";
+import MovieDetails from "./components/MovieDetails"
 
 import "./App.css";
 
@@ -10,6 +11,7 @@ const App: React.FC = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MovieList />} />
+          <Route path="/movies/:movieId" element={<MovieDetails />} />
         </Routes>
       </BrowserRouter>
     </div>
