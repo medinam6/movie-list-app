@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 interface MovieDetailsData {
   title: string;
@@ -74,6 +74,9 @@ const MovieDetails: React.FC = () => {
         <div>{movieDetails.vote_count}</div>
       </div>
 
+      <Link to="/">
+        <h3>Back to Home</h3>
+      </Link>
     </div>
   );
 };

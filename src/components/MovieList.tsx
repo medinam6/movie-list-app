@@ -3,7 +3,6 @@ import axios from "axios";
 
 import MovieCard from "./MovieCard";
 
-
 interface Movie {
   id: string;
   title: string;
