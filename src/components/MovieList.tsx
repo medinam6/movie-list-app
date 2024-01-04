@@ -23,7 +23,7 @@ const MovieList: React.FC = () => {
 
         setMovies(response.data.results);
       } catch (error) {
-        console.error("Error fetching movieds: ", error);
+        console.error("Error fetching movies: ", error);
       } finally {
         setLoading(false);
       }
