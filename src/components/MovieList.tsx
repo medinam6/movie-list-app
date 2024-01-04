@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
 import axios from "axios";
+import React, { useState, useEffect } from "react";
 
 import MovieCard from "./MovieCard";
 
@@ -42,7 +42,7 @@ const MovieList: React.FC = () => {
   return (
     <div>
       <h2>Popular Movies</h2>
-      <ul>
+      <ul className="home-grid">
         {movies.map((movie) => (
           <MovieCard
             key={movie.id}
