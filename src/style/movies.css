@@ -1,0 +1,30 @@
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.movie-card {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-bottom: 1rem;
+}
+
+h3 {
+    overflow: hidden;
+  	text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 1rem 0 1rem;
+}
+
+.movie-details-container {
+    /* width: 100%; */
+    max-width: 10%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

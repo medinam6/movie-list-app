@@ -2,6 +2,8 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
+import "../style/movies.css"
+
 interface MovieDetailsData {
   title: string;
   overview: string;
@@ -46,7 +48,7 @@ const MovieDetails: React.FC = () => {
   }
 
   return (
-    <div>
+    <div className="movie-datails-container">
       <h2>{movieDetails.title}</h2>
 
       <div>

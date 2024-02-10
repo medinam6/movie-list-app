@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 
 import MovieCard from "./MovieCard";
 
+import "../style/movies.css"
+
 interface Movie {
   id: string;
   title: string;
